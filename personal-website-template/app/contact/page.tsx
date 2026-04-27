@@ -45,8 +45,16 @@ function MailIcon() {
 }
 
 const socialLinks = [
-  { label: "LinkedIn", icon: LinkedInIcon, href: "#" },
-  { label: "GitHub", icon: GitHubIcon, href: "#" },
+  {
+    label: "LinkedIn",
+    icon: LinkedInIcon,
+    href: "https://www.linkedin.com/in/teresachirayil",
+  },
+  {
+    label: "GitHub",
+    icon: GitHubIcon,
+    href: "https://github.com/TeresaChirayil",
+  },
   {
     label: "Email",
     icon: MailIcon,
