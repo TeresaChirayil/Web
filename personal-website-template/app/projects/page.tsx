@@ -17,6 +17,7 @@ const projects = [
     blurb:
       "A medication support app with reminders, pill scanning, and a chat assistant so users can manage daily care with more confidence.",
     accent: "Health technology",
+    href: "",
     tone: "bg-[#270708] text-[#f1ebeb]",
     panel:
       "bg-[radial-gradient(circle_at_30%_20%,rgba(213,191,178,0.14),transparent_26%),linear-gradient(145deg,#640810_0%,#3f0910_42%,#270708_100%)]",
@@ -96,7 +97,7 @@ export default function ProjectsPage() {
                   {project.blurb}
                 </p>
                 <div className="mt-10">
-                  {project.href ? (
+                  {"href" in project && project.href ? (
                     <a
                       href={project.href}
                       target="_blank"
