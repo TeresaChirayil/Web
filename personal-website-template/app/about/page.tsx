@@ -1,55 +1,5 @@
 import Link from "next/link";
 
-function InstagramIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.9"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
-      <circle cx="12" cy="12" r="4.25" />
-      <circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function LinkedInIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5"
-      fill="currentColor"
-    >
-      <path d="M5.4 8.5A1.95 1.95 0 1 0 5.4 4.6a1.95 1.95 0 0 0 0 3.9ZM3.8 9.9h3.2v10.3H3.8V9.9Zm5.2 0h3.1v1.4h.1c.4-.8 1.5-1.7 3.3-1.7 3.5 0 4.1 2.1 4.1 5v5.6h-3.2v-5c0-1.2 0-2.8-1.8-2.8s-2.1 1.3-2.1 2.7v5.1H9V9.9Z" />
-    </svg>
-  );
-}
-
-function MailIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="2.5" y="5.5" width="19" height="13" rx="1.75" />
-      <path d="m4 7 8 6 8-6" />
-    </svg>
-  );
-}
-
 const bio =
   "Hi, my name is Teresa! I am a junior studying CS. I am currently a member of the WiCyS experience team and I am making ctf challenges. I am the VP of Finnance of CSO. Through my internship at Everyone Can Code Apple I created two apps using swift, Machine Learning, and Firebase. I have also participated in two hackathons. The first one we created an app that helps local coffee shops by having digital punchcards. This year we created a website with React that helps people new to the industry find people to work on projects with, using a matchmaking feature and won the hackathon! I am also proficient in C++, C, Python, Java, and Javascript.";
 
@@ -71,6 +21,9 @@ export default function AboutPage() {
             </Link>
             <Link href="/projects" className="transition hover:text-[#f1ebeb]">
               Projects
+            </Link>
+            <Link href="/contact" className="transition hover:text-[#f1ebeb]">
+              Contact
             </Link>
           </nav>
         </header>
@@ -103,30 +56,16 @@ export default function AboutPage() {
           </div>
 
           <aside className="flex items-end bg-[#d5bfb2] px-6 py-10 text-[#270708] sm:px-10 lg:px-12 lg:py-16">
-            <div>
-              <div className="flex items-center gap-5 text-[#270708]">
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  className="transition hover:opacity-70"
-                >
-                  <InstagramIcon />
-                </a>
-                <a
-                  href="#"
-                  aria-label="LinkedIn"
-                  className="transition hover:opacity-70"
-                >
-                  <LinkedInIcon />
-                </a>
-                <a
-                  href="#"
-                  aria-label="Email"
-                  className="transition hover:opacity-70"
-                >
-                  <MailIcon />
-                </a>
-              </div>
+            <div className="max-w-md">
+              <p className="text-[0.68rem] uppercase tracking-[0.32em] text-[#640810]">
+                Next step
+              </p>
+              <p
+                className="mt-4 text-3xl leading-tight sm:text-4xl"
+                style={{ fontFamily: "var(--font-editorial-serif), serif" }}
+              >
+                Visit the Contact page to connect.
+              </p>
             </div>
           </aside>
         </section>

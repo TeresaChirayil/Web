@@ -3,6 +3,16 @@ import Link from "next/link";
 
 const projects = [
   {
+    name: "MotherNurture",
+    blurb:
+      "A mental health and community app for new and expecting parents navigating postpartum stress, anxiety, and isolation.",
+    accent: "Community care",
+    href: "https://asiabutt05.wixsite.com/mothernurture",
+    tone: "bg-[#640810] text-[#f1ebeb]",
+    panel:
+      "bg-[radial-gradient(circle_at_65%_15%,rgba(241,235,235,0.12),transparent_22%),linear-gradient(145deg,#d5bfb2_0%,#640810_48%,#270708_100%)]",
+  },
+  {
     name: "PillPal",
     blurb:
       "A medication support app with reminders, pill scanning, and a chat assistant so users can manage daily care with more confidence.",
@@ -10,15 +20,6 @@ const projects = [
     tone: "bg-[#270708] text-[#f1ebeb]",
     panel:
       "bg-[radial-gradient(circle_at_30%_20%,rgba(213,191,178,0.14),transparent_26%),linear-gradient(145deg,#640810_0%,#3f0910_42%,#270708_100%)]",
-  },
-  {
-    name: "MotherNurture",
-    blurb:
-      "A mental health and community app for new and expecting parents navigating postpartum stress, anxiety, and isolation.",
-    accent: "Community care",
-    tone: "bg-[#640810] text-[#f1ebeb]",
-    panel:
-      "bg-[radial-gradient(circle_at_65%_15%,rgba(241,235,235,0.12),transparent_22%),linear-gradient(145deg,#d5bfb2_0%,#640810_48%,#270708_100%)]",
   },
   {
     name: "OnStage",
@@ -45,11 +46,8 @@ export default function ProjectsPage() {
     <main className="min-h-screen overflow-y-auto px-5 py-5 text-[#f1ebeb] sm:px-8 lg:px-10">
       <div className="mx-auto max-w-7xl overflow-hidden border border-[#d5bfb2]/15 bg-[#270708]/95 shadow-[0_30px_80px_rgba(13,1,4,0.6)]">
         <div className="flex items-center justify-between gap-6 border-b border-[#d5bfb2]/15 px-6 py-4 sm:px-8">
-          <Link
-            href="/"
-            className="border border-[#d5bfb2]/30 px-4 py-2 text-[0.68rem] uppercase tracking-[0.24em] text-[#f1ebeb] transition hover:border-[#d5bfb2] hover:bg-[#f1ebeb]/5"
-          >
-            Back
+          <Link href="/" className="transition hover:text-[#f1ebeb]">
+            Teresa Chirayil
           </Link>
           <div className="flex-1 text-center">
             <h1
@@ -60,7 +58,20 @@ export default function ProjectsPage() {
             </h1>
             <div className="mx-auto mt-3 h-px w-24 bg-[#f1ebeb]/20" />
           </div>
-          <div className="w-[76px]" aria-hidden="true" />
+          <nav className="flex items-center gap-6 text-[0.72rem] uppercase tracking-[0.35em] text-[#d5bfb2] sm:gap-10">
+            <Link href="/about" className="transition hover:text-[#f1ebeb]">
+              About
+            </Link>
+            <Link
+              href="/projects"
+              className="border-b border-[#f1ebeb] pb-1 text-[#f1ebeb]"
+            >
+              Projects
+            </Link>
+            <Link href="/contact" className="transition hover:text-[#f1ebeb]">
+              Contact
+            </Link>
+          </nav>
         </div>
 
         <section className="grid gap-px bg-[#f1ebeb]/10">
@@ -85,16 +96,31 @@ export default function ProjectsPage() {
                   {project.blurb}
                 </p>
                 <div className="mt-10">
-                  <button
-                    type="button"
-                    className={`border px-5 py-3 text-[0.72rem] uppercase tracking-[0.24em] transition ${
-                      project.tone.includes("bg-[#270708]")
-                        ? "border-[#d5bfb2] text-[#f1ebeb] hover:bg-[#d5bfb2] hover:text-[#270708]"
-                        : "border-[#270708]/50 text-current hover:bg-[#270708] hover:text-[#f1ebeb]"
-                    }`}
-                  >
-                    View project
-                  </button>
+                  {project.href ? (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`inline-block border px-5 py-3 text-[0.72rem] uppercase tracking-[0.24em] transition ${
+                        project.tone.includes("bg-[#270708]")
+                          ? "border-[#d5bfb2] text-[#f1ebeb] hover:bg-[#d5bfb2] hover:text-[#270708]"
+                          : "border-[#270708]/50 text-current hover:bg-[#270708] hover:text-[#f1ebeb]"
+                      }`}
+                    >
+                      View project
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      className={`border px-5 py-3 text-[0.72rem] uppercase tracking-[0.24em] transition ${
+                        project.tone.includes("bg-[#270708]")
+                          ? "border-[#d5bfb2] text-[#f1ebeb] hover:bg-[#d5bfb2] hover:text-[#270708]"
+                          : "border-[#270708]/50 text-current hover:bg-[#270708] hover:text-[#f1ebeb]"
+                      }`}
+                    >
+                      View project
+                    </button>
+                  )}
                 </div>
               </div>
 

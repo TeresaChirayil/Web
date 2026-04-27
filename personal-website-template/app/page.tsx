@@ -14,6 +14,9 @@ export default function Home() {
             <Link href="/projects" className="transition hover:text-[#f1ebeb]">
               Projects
             </Link>
+            <Link href="/contact" className="transition hover:text-[#f1ebeb]">
+              Contact
+            </Link>
           </nav>
         </header>
 
